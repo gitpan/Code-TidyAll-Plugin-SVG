@@ -20,15 +20,15 @@ Files: COPYRIGHT
 Copyright: None
 License: public-domain
 
-Files: INSTALL
- LICENSE
-Copyright: Unknown
-License: Unknown
-
 Files: README
  lib/Code/TidyAll/Plugin/SVG.pm
 Copyright: This software is copyright (c) 2014 by Jonas Smedegaard.
 License: GPL-1.0+ or Artistic-1.0
+
+Files: INSTALL
+ LICENSE
+Copyright: Unknown
+License: Unknown
 
 Files: Makefile.PL
 Copyright: Copyright 2013 Toby Inkster.

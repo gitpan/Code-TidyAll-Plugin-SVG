@@ -4,14 +4,17 @@ use strict;
 use warnings;
 
 use XML::Twig;
+use String::Escape qw(escape);
+
 use Moo;
+use namespace::clean;
 
 extends 'Code::TidyAll::Plugin';
 
 our $AUTHORITY = 'cpan:JONASS';
-our $VERSION   = '0.001';
+our $VERSION   = '0.002';
 
-has 'indent' => ( is => 'ro', default => sub {"\n"} );
+has 'indent' => ( is => 'ro', default => sub {"\t"} );
 has 'style'  => ( is => 'ro', default => sub {'cvs'} );
 
 sub transform_file
@@ -27,7 +30,8 @@ sub transform_file
 		}
 	);
 
-	$svg->set_indent( $self->indent ) if $self->indent;
+	$svg->set_indent(
+		escape( 'unqqbackslash unsinglequote', $self->indent ) );
 
 	$svg->parsefile_inplace($file);
 }
@@ -44,7 +48,7 @@ Code::TidyAll::Plugin::SVG - optimize SVG files with tidyall
 
 =head1 VERSION
 
-version 0.001
+version 0.002
 
 =head1 SYNOPSIS
 

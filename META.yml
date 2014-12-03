@@ -30,10 +30,11 @@ optional_features: {}
 provides:
   Code::TidyAll::Plugin::SVG:
     file: lib/Code/TidyAll/Plugin/SVG.pm
-    version: '0.001'
+    version: '0.002'
 requires:
   Code::TidyAll: '0'
   Moo: '0'
+  String::Escape: '0'
   XML::Twig: '0'
   perl: '5.010001'
 resources:
@@ -42,6 +43,6 @@ resources:
   homepage: https://metacpan.org/release/Code-TidyAll-Plugin-SVG
   license: http://dev.perl.org/licenses/
   repository: https://anonscm.debian.org/cgit/design/Code-TidyAll-Plugin-SVG.git
-version: '0.001'
+version: '0.002'
 x_help_wanted:
   - tester

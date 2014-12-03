@@ -2,7 +2,7 @@ NAME
     Code::TidyAll::Plugin::SVG - optimize SVG files with tidyall
 
 VERSION
-    version 0.001
+    version 0.002
 
 SYNOPSIS
        In configuration:

@@ -19,7 +19,13 @@ my $meta = {
   "prereqs"        => {
                         configure => { requires => { "ExtUtils::MakeMaker" => 6.17 } },
                         runtime => {
-                          requires => { "Code::TidyAll" => 0, "Moo" => 0, "perl" => 5.010001, "XML::Twig" => 0 },
+                          requires => {
+                            "Code::TidyAll" => 0,
+                            "Moo" => 0,
+                            "perl" => 5.010001,
+                            "String::Escape" => 0,
+                            "XML::Twig" => 0,
+                          },
                         },
                         test => {
                           requires => {
@@ -31,7 +37,7 @@ my $meta = {
                         },
                       },
   "provides"       => {
-                        "Code::TidyAll::Plugin::SVG" => { file => "lib/Code/TidyAll/Plugin/SVG.pm", version => 0.001 },
+                        "Code::TidyAll::Plugin::SVG" => { file => "lib/Code/TidyAll/Plugin/SVG.pm", version => 0.002 },
                       },
   "release_status" => "stable",
   "resources"      => {
@@ -46,7 +52,7 @@ my $meta = {
                                         },
                         x_identifier => "http://purl.org/NET/cpan-uri/dist/Code-TidyAll-Plugin-SVG/project",
                       },
-  "version"        => 0.001,
+  "version"        => 0.002,
   "x_help_wanted"  => ["tester"],
 };
 
